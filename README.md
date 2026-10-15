@@ -1,4 +1,4 @@
-# LED Display
+# LED Dashboard
 
 **Time, weather, and the market on a Raspberry Pi LED matrix.**
 
@@ -119,8 +119,8 @@ Run these commands **on the Raspberry Pi**, as your normal user. Use `sudo` only
 sudo apt update
 sudo apt install -y git
 cd ~
-git clone https://github.com/jsburky/LED-Display.git
-cd LED-Display
+git clone https://github.com/jsburky/LED-Dashboard.git
+cd LED-Dashboard
 ```
 
 ### 2. Add your API keys
@@ -221,7 +221,7 @@ For a direct test, including without a keypad, stop the service and run `time.py
 
 ```bash
 sudo systemctl stop program_launcher.service
-cd ~/LED-Display
+cd ~/LED-Dashboard
 sudo "$HOME/.venv/bin/python3" time.py \
   --led-rows=64 \
   --led-cols=64 \
@@ -263,7 +263,7 @@ For automatic startup, edit `DEFAULT_CLOCK_COMMAND` near the top of `main.py`. F
 To see all supported display options:
 
 ```bash
-"$HOME/.venv/bin/python3" ~/LED-Display/time.py --help
+"$HOME/.venv/bin/python3" ~/LED-Dashboard/time.py --help
 ```
 
 ### Launcher settings
